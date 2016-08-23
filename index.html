@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<title>iCloud</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="box" ng-controller='icloud'>
+		<div class="left">
+			<div class="title">
+				iCloud
+				<div class="titles" ng-click='leftadd()'>
+					<span></span>
+					<span></span>
+				</div>
+				
+			</div>
+			<ul class="list">
+				<h3>已计划</h3>
+				<li ng-repeat='v in todu track by $index' ng-click='
+				leftbg($index)' ng-style='{background:index==$index?"#2A2A28":""}'>
+					<span ng-style="{background:colors[$index%7]}"></span>
+					<h4>{{v.title}}</h4>
+				</li>
+
+			</ul>
+		</div>
+		<div class="right">
+			<div class="sousuo">
+				<div class="sousuolog"></div>
+				<input type="text" placeholder="搜索所有提醒" ng-change='focus()' ng-model='filt'>
+				<div class="sousuox" ng-hide='f2' ng-click="sousuox()">X</div>
+			</div>
+			<div class="title" ng-show="f2">
+				<div class="titles" ng-style="{color:colors[index%7]}">
+					<span>{{todu[index].title}}</span>
+					<span ng-click="getTitle()">选项</span>
+					<div class="xxkuang" ng-show='f'>
+						<div class="neikuang">
+							<div class="one">
+								<input type="text" ng-model='titles' ng-style='{color:getcolor}'>
+							</div>
+							<h5 style='color:#1A1A1A'>列表颜色</h5>
+							<ul class="two">
+								<li ng-repeat="v in colors track by $index" ng-style="{backgroundColor:v,borderColor:v==getcolor?v:''}" ng-click="changecolor($index)"></li>
+							</ul>
+							<div class="three">
+								<p ng-click="del()">删除</p>			
+								<p ng-click="xzok()">完成</p>
+								<p ng-click="xzqx()">取消</p>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="content"  ng-show="f2">
+				<div class="stitle" ng-click="flags()">
+					<span ng-class="{true:'span-in',false:'span-out'}[flag]"></span>
+					已完成{{getNum}}项</div>
+				<ul ng-repeat='v in todu[index].list | filter:adding' ng-hide="flag">
+					<span ng-style="{'backgroundColor':colors[index%7],'border':'2px solid '+colors[index%7]}" ng-click="weiwan(v,false)"></span>
+					<li><input type="text" ng-model='v.content'>{{v.date | date:'yyyy-MM-dd HH:mm:ss'}}</li>
+				</ul>
+				<ul ng-repeat='v in todu[index].list | filter:doing'>
+					<span ng-style="{'border':'2px solid '+colors[index%7]}" ng-click="weiwan(v,true)"></span>
+					<li><input type="text" ng-model='v.content'>{{v.date | date:'yyyy-MM-dd HH:mm:ss'}}</li>
+				</ul>
+				<p ng-click="rightadd()">新项目...</p>
+			</div>
+
+			
+			<div class="rightbox" ng-hide='f2'>
+				<h1>“{{filt}}”的搜索结果</h1>
+				<div ng-repeat='v in todu | filter:filt'>		
+					<div class="title">
+						<div class="titles" ng-style="{color:colors[$index%7]}">
+							<span>{{v.title}}</span>
+						</div>
+						<span ng-bind='boxi=$index' style="display:none"></span>		
+					</div>
+					<div class="content" ng-repeat='v in todu[$index].list | filter:filt'>
+						<ul>
+							<span ng-style="{'border':'2px solid '+colors[boxi%7],'backgroundColor':v.done?colors[boxi%7]:''}"></span>
+							<li><input type="text" ng-model='v.content'>{{v.date | date:'yyyy-MM-dd HH:mm:ss'}}</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+
+
+
+			
+		</div>
+	</div>
+</body>
+<script src="js/angular.min.js"></script>
+<script src="js/index.js"></script>
+</html>

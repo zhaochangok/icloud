@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  margin-left: 369px;
+}
+.box .left {
+  width: 369px;
+  height: 100%;
+  margin-left: -369px;
+  float: left;
+  background: #383836;
+}
+.box .left .title {
+  width: 369px;
+  height: 45px;
+  border-bottom: 1px solid #232322;
+  box-sizing: border-box;
+  padding-left: 13px;
+  line-height: 45px;
+  color: #fff;
+  font-size: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #383836;
+  z-index: 999;
+}
+.box .left .title .titles {
+  width: 40px;
+  height: 45px;
+  float: right;
+}
+.box .left .title .titles span {
+  display: block;
+  width: 1px;
+  height: 20px;
+  background: #fff;
+  float: right;
+  margin-top: 12px;
+  margin-right: 22px;
+}
+.box .left .title .titles span:nth-child(2) {
+  width: 20px;
+  height: 1px;
+  margin-top: 22px;
+  margin-right: -10px;
+}
+.box .left .list {
+  width: 100%;
+  height: 100%;
+  padding-top: 45px;
+  overflow-y: auto;
+}
+.box .left .list h3 {
+  width: 100%;
+  height: 44px;
+  border-bottom: 1px solid #2A2A28;
+  box-sizing: border-box;
+  padding-left: 46px;
+  display: block;
+  line-height: 44px;
+  font-size: 16px;
+  color: #fff;
+}
+.box .left .list li {
+  width: 100%;
+  padding-left: 46px;
+  position: relative;
+}
+.box .left .list li h4 {
+  display: block;
+  line-height: 44px;
+  height: 44px;
+  border-top: 1px solid #3E3E3C;
+  border-bottom: 1px solid #2A2A28;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.box .left .list li span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: red;
+  position: absolute;
+  left: 17px;
+  top: 15px;
+}
+.box .right {
+  width: 100%;
+  height: 100%;
+  float: right;
+  overflow-y: auto;
+}
+.box .right .sousuo {
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #D8D8D8;
+  padding-left: 45px;
+  position: relative;
+}
+.box .right .sousuo input {
+  border: none;
+  width: 420px;
+  height: 44px;
+  font-size: 18px;
+  line-height: 44px;
+  color: #BBBBBB;
+}
+.box .right .sousuo .sousuolog {
+  width: 22px;
+  height: 22px;
+  background: url(../images/sousuo.png);
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  top: 11px;
+}
+.box .right .sousuo .sousuox {
+  width: 20px;
+  height: 44px;
+  position: absolute;
+  left: 440px;
+  top: 0;
+  line-height: 44px;
+  font-size: 20px;
+  color: #D8D8D8;
+  cursor: pointer;
+}
+.box .right .title {
+  width: 100%;
+  padding-left: 30px;
+}
+.box .right .title .titles {
+  border-bottom: 1px solid #E1E1E1;
+  margin-top: 18px;
+  position: relative;
+}
+.box .right .title .titles span:nth-child(1) {
+  font-size: 35px;
+  line-height: 60px;
+}
+.box .right .title .titles span:nth-child(2) {
+  font-size: 16px;
+  float: right;
+  margin-right: 400px;
+  margin-top: 30px;
+}
+.box .right .title .titles .xxkuang {
+  width: 365px;
+  height: 235px;
+  background: #fff;
+  border: 1px solid #E1E1E1;
+  position: absolute;
+  right: 446px;
+  top: -53px;
+  z-index: 999;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.7);
+}
+.box .right .title .titles .xxkuang .neikuang {
+  width: 353px;
+  height: 223px;
+  border-radius: 8px;
+  border: 1px solid #E1E1E1;
+  text-align: center;
+}
+.box .right .title .titles .xxkuang .neikuang .one {
+  width: 100%;
+  height: 85px;
+  text-align: center;
+  line-height: 50px;
+}
+.box .right .title .titles .xxkuang .neikuang .one input {
+  width: 316px;
+  height: 44px;
+  border: 1px solid #e1e1e1;
+  diplay: inline-block;
+  font-size: 20px;
+  margin-top: 17px;
+}
+.box .right .title .titles .xxkuang .neikuang .two {
+  width: 316px;
+  height: 64px;
+  display: inline-block;
+}
+.box .right .title .titles .xxkuang .neikuang .two li {
+  width: 33px;
+  height: 33px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  padding: 3px;
+  background-clip: content-box;
+  margin: 10px 5px;
+  float: left;
+}
+.box .right .title .titles .xxkuang .neikuang .three {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 15px;
+  font-size: 18px;
+}
+.box .right .title .titles .xxkuang .neikuang .three p {
+  margin-left: 20px;
+}
+.box .right .title .titles .xxkuang .neikuang .three p:nth-child(1) {
+  color: #FF4139;
+  float: left;
+}
+.box .right .title .titles .xxkuang .neikuang .three p:nth-child(2) {
+  color: #2E3BD8;
+  float: right;
+  margin-right: 34px;
+}
+.box .right .title .titles .xxkuang .neikuang .three p:nth-child(3) {
+  color: #2E3BD8;
+  float: right;
+}
+.box .right .title .titles .xxkuang .neikuang h5 {
+  width: 100px;
+  display: block;
+}
+.box .right .content {
+  margin-left: 80px;
+}
+.box .right .content li {
+  height: 52px;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 18px;
+  line-height: 52px;
+  color: #999999;
+}
+.box .right .content li input {
+  height: 52px;
+  border: none;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 18px;
+  line-height: 52px;
+  color: #999999;
+}
+.box .right .content .stitle {
+  height: 52px;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 18px;
+  line-height: 52px;
+  color: #999999;
+  position: relative;
+}
+.box .right .content .stitle .span-in {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: red;
+  position: absolute;
+  left: -35px;
+  top: 14px;
+  background: url(../images/jiantou.png);
+}
+.box .right .content .stitle .span-out {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: red;
+  position: absolute;
+  left: -35px;
+  top: 14px;
+  background: url(../images/jiantou.png) no-repeat 0 -25px;
+}
+.box .right .content p {
+  height: 52px;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 18px;
+  line-height: 52px;
+  color: #999999;
+}
+.box .right .content ul {
+  position: relative;
+}
+.box .right .content ul span {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid red;
+  background-color: rgba(0, 0, 0, 0);
+  background-clip: content-box;
+  position: absolute;
+  left: -42px;
+  top: 11px;
+}
+.box .right .rightbox {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.box .right .rightbox h1 {
+  padding-left: 30px;
+  line-height: 60px;
+  color: #484848;
+}
+.box .right .rightbox .title {
+  width: 100%;
+  padding-left: 30px;
+}
+.box .right .rightbox .title .titles {
+  border-bottom: 1px solid #E1E1E1;
+  margin-top: 18px;
+}
+.box .right .rightbox .title .titles span:nth-child(1) {
+  font-size: 25px;
+  line-height: 40px;
+}
+.box .right .rightbox .title .titles span:nth-child(2) {
+  font-size: 16px;
+  float: right;
+  margin-right: 400px;
+  margin-top: 30px;
+}
+.box .right .rightbox .content {
+  margin-left: 80px;
+}
+.box .right .rightbox .content li {
+  height: 52px;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 18px;
+  line-height: 52px;
+  color: #999999;
+}
+.box .right .rightbox .content li input {
+  height: 52px;
+  border: none;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 18px;
+  line-height: 52px;
+  color: #999999;
+}
+.box .right .rightbox .content .stitle {
+  height: 52px;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 18px;
+  line-height: 52px;
+  color: #999999;
+  position: relative;
+}
+.box .right .rightbox .content .stitle .span-in {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: red;
+  position: absolute;
+  left: -35px;
+  top: 14px;
+  background: url(../images/jiantou.png);
+}
+.box .right .rightbox .content .stitle .span-out {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: red;
+  position: absolute;
+  left: -35px;
+  top: 14px;
+  background: url(../images/jiantou.png) no-repeat 0 -25px;
+}
+.box .right .rightbox .content p {
+  height: 52px;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 18px;
+  line-height: 52px;
+  color: #999999;
+}
+.box .right .rightbox .content ul {
+  position: relative;
+}
+.box .right .rightbox .content ul span {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid red;
+  background-color: rgba(0, 0, 0, 0);
+  background-clip: content-box;
+  position: absolute;
+  left: -42px;
+  top: 11px;
+}
